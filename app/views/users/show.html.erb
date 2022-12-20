@@ -4,8 +4,8 @@
   <div class="row">
 
     <div class="col-md-3">
+
       <%= render 'info',user: @user %>
-      <!--<h2 class="mt-3">New book</h2>-->
       <%= render 'books/book',book: @booknew %>
     </div>
 
@@ -21,7 +21,7 @@
               </tr>
              </thead>
               <tbody>
-              <<% @books.each do |book| %>
+              <% @books.each do |book| %>
               <tr>
                 <td>
                   <%= link_to @user_path do %>

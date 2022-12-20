@@ -16,13 +16,14 @@
 
         <% if devise_mapping.rememberable? %>
           <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
+            <input name="user[remember_me]" type="hidden" value="0">
+            <input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+            <label for="user_remember_me">Remember me</label>
           </div>
         <% end %>
 
         <div class="actions">
-          <%= f.submit "Log in" %>
+          <input type="submit" name="commit" value="Log in" class="btn btn-sm btn-primary mt-2" data-disable-with="Log in">
         </div>
       <% end %>
 

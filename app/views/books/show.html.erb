@@ -16,11 +16,14 @@
             <tbody>
               <tr>
                 <td>
-                  <%= link_to @user_path do %>
-                  <td><%= image_tag @user.get_profile_image, size: '50x50' %></td>
-                  <td><%= @user.name %></td>
-                  <% end %>
-                </td>
+
+                  <td><%= image_tag @user.get_profile_image, size: '100x100' %></td>
+                  <br>
+                  <td>
+                    <%= link_to user_path(@user.id) do %>
+                    <%= @user.name %>
+                    <% end %>
+                  </td>
 
                 <td>
                   <%= link_to book_path(@book.id) do %>
